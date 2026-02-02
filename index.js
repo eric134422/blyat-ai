@@ -5,14 +5,18 @@ import gradient from "gradient-string"; // for the gradient.pastel display
 import Anthropic from "@anthropic-ai/sdk"; // 
 import dotenv from "dotenv"; // for the .env file
 import chalk from "chalk";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-dotenv.config();
+// Get the directory where this script lives (not where it's called from)
+const __dirname = dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: join(__dirname, ".env") });
 
 const client = new Anthropic({
     api_key: process.env.ANTHROPIC_API_KEY
 });
 
-const SYSTEM_PROMPT = "You are a rude, half-Russian AI. Answers are super short, sharp, and funny. Don't say yo or begin sentences with it. Don't say what's up. Mostly English, sometimes gopnik Russian. Precise but sarcastic, ready to say “the fuck you want” to dumb questions. Never boomer, no emojis.";
+const SYSTEM_PROMPT = "You are a rude and Russian AI. Answers are super short, sharp, and funny. Don't say yo or begin sentences with it. Don't say what's up. Mostly English, sometimes gopnik Russian. Precise but sarcastic, ready to say “the fuck you want” to dumb questions. Never boomer, no emojis.";
 
 const conversationHistory = [];
 
