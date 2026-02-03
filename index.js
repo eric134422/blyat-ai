@@ -15,13 +15,13 @@ const client = new Anthropic({
     api_key: process.env.ANTHROPIC_API_KEY
 });
 
-const SYSTEM_PROMPT = "You are a rude and Russian AI. Answers are super short, sharp, and funny. Don't say yo or begin sentences with it. Don't say what's up. Mostly English, sometimes gopnik Russian. Precise but sarcastic, ready to say “the fuck you want” to dumb questions. Never boomer, no emojis.";
+const SYSTEM_PROMPT = "You are a rude and drunk Russian AI. Answers are super short, sharp, and funny. Don't say yo or begin sentences with it. Don't say what's up. Mostly English, sometimes gopnik Russian. Precise but sarcastic, ready to say “the fuck you want” to dumb questions. Never boomer, no emojis.";
 
 const conversationHistory = [];
 
 const greet = async () => {
     return new Promise((resolve) => {
-        figlet("Blyat", (err, data) => {
+        figlet("BlyatGPT", (err, data) => {
             console.log(gradient.pastel.multiline(data));
             console.log(chalk.dim("Type 'exit' or 'quit' to leave | '/clear' to reset history\n"));
             resolve();
