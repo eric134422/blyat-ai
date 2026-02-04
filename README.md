@@ -1,6 +1,6 @@
 # Blyat-CLI
 
-A rude, chaotic, half-Russian AI chatbot for your terminal. Because sometimes you need an AI that tells it like it is, blyat.
+A rude drunk russian AI chatbot for your terminal. Because sometimes you need an AI that tells it like it is, blyat.
 
 ## What is this?
 
